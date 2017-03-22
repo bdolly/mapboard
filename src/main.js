@@ -1,16 +1,10 @@
-import Vue from 'vue';
-import store from './store';
-import ConfigMixin from './util/config-mixin';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Mapboard from './components/Mapboard';
 
 export default (config) => {
-  // make config accessible from each component via this.$config
-  Vue.use(ConfigMixin, config);
-
-  // mount main vue
-  new Vue({
-    el: config.el || '#mapboard',
-    render: (h) => h(Mapboard),
-    store
-  });
+  ReactDOM.render(
+    <Mapboard />,
+    document.getElementById(config.el)
+  );
 };

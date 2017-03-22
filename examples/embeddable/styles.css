@@ -1,3 +1,8 @@
 header.site-header > .row:last-of-type {
     background: #2176d2;
 }
+
+/*TODO move this out of here*/
+.leaflet-container {
+  height: 100%;
+}

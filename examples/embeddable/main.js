@@ -1,4 +1,5 @@
 Mapboard.default({
+  el: 'mapboard',
   topics: [
     {
       key: 'dor',
