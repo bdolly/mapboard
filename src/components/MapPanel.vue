@@ -10,6 +10,7 @@
                          :key="key"
                          :url="basemap.url"
       />
+      <DorParcels />
     </Map_>
   </div>
 </template>
@@ -19,12 +20,14 @@
   import Map_ from '../leaflet/Map';
   import SearchControl from './SearchControl';
   import EsriTiledMapLayer from '../esri-leaflet/TiledMapLayer';
+  import DorParcels from '../esri-leaflet/DorParcels';
 
   export default {
     components: {
       Map_,
       SearchControl,
-      EsriTiledMapLayer
+      EsriTiledMapLayer,
+      DorParcels
     },
     computed: {
       activeBasemap() {
